@@ -1,0 +1,112 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 100%;
+}
+
+footer {
+  width: 100%;
+}
+
+h2{
+  font-size: 32px;
+  padding: 0px;
+}
+
+button {
+  background-color: #457B9D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  
+}
+
+
+button:hover {
+  opacity: 0.8;
+}
+
+.restaurantInfo {
+  display: flex;
+
+  width: 90%;
+
+}
+
+.currentRating p {
+   font-weight: bold;
+   font-size:20px;
+   display: inline-block;
+
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.commentForm textarea {
+  width: 100%;
+  height: 5em;
+}
+
+.rating {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#reviewQ, #reviewSelector {
+  display: inline-block;
+}
+
+
+
+.contactInfo {
+
+  display:flex;
+  justify-content: space-around;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#address {
+
+}
+
+#phone {
+
+}
+
+#picture{
+
+  float:left;
+  margin: 10px;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.reviewSection {
+  width: 90%;
+}
+
+
+.reviewContainer {
+  display: flex;
+  justify-content: space-between;
+  border: solid;
+  margin: 2em;
+  padding-right: 3em;
+  align-items: center
+}

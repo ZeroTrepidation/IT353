@@ -1,0 +1,55 @@
+header {background: teal}
+* {font-family: Myriad Pro;}
+body{
+
+        background-color: #b1cdcd;
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    .container{
+        width: 90%;
+        margin: 0 auto; /* Center the DIV horizontally */
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+    .fixed-header, .fixed-footer{
+
+        width: 100%;
+        position: fixed;
+        background: #333;
+        padding: 0 0;
+        color: #fff;
+        outline: solid 5px white;
+    }
+    .fixed-header{
+        text-decoration: underline;
+        text-shadow: 2px 2px black;
+        top: 0;
+        left: 0;
+        font-size: 20px;
+        box-shadow: 0px 10px 10px rgb(0,0,0,0.5);
+    }
+    .fixed-footer{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }.header-background{
+      top: 0;
+      left: 0;
+      background-color: black;
+    }
+    a:hover{
+      font-weight: bold;
+    }
+
+footer{
+}.container{
+    width: 90%;
+    margin: 0 auto; /* Center the DIV horizontally */
+}
+  .fixed-footer{
+      bottom: 0;
+      left: 0;
+      width: 100%;
+  }

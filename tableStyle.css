@@ -1,0 +1,43 @@
+/* table styling */
+table,body {
+   font-family: "Lucida Sans", Verdana, Arial, sans-serif;
+   font-size: 1em;
+}
+td, th {
+   border: solid 1pt #949493 ;
+
+}
+thead, tfoot {
+  background-color: lightblue;
+  color: black;
+
+}
+caption{
+  text-align: left;
+  text-transform: capitalize;
+  background-color: #5DADE2;
+  font-weight: bolder;
+  padding: 10px;
+}
+tbody tr:nth-child(odd) {
+  background-color: #F9E79F;
+}
+tbody tr:hover {
+  background-color: black;
+  color: white;
+}
+
+
+
+
+/* footer and header */
+header, footer {
+  color: #111313;
+}
+h1 {
+  font-size: 2rem;
+  padding: 0.5em;
+}
+footer p{
+  font-size: 1rem;
+}

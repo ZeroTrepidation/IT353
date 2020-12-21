@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Example - AJAX</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <script type="text/javascript">
+      function display() {
+      var searchNumber = $("#input").val();
+      var url = "http://opentable.herokuapp.com/api/restaurants?";
+      var data = "city=chi";
+      $.get(url, data).done(function(response) {
+        response.current_page = 3;
+        $("#restaurants").append('<h2> restaurant(s) found</h2>');
+        for (var i = 0; i < $("#input").val(); i++) {
+          $("#restaurants").append('<p>' + response.restaurants[i].name + '</p>');
+          $("#restaurants").append('<img src='+ response.restaurants[i].image_url +' alt="">');
+          $("#restaurants").append('<button type="button" value="leave a comment">Write a review</button>');
+        }
+      });
+    }
+
+      $(document).ready(function(){
+        $("#display").on('click',display);
+    });
+    </script>
+
+    <script type="text/javascript">
+    function autoDisplay() {
+      var searchNumber = $("#input2").val();
+      var url = "http://opentable.herokuapp.com/api/restaurants?";
+      var data = "city=chi";
+      $("#buttonTest").append('<p> you searched for: ' + $("#input2").val() + '</p>');
+      $.get(url, data).done(function(response) {
+        response.current_page = 3;
+        $("#buttonTest").append('<h2> restaurant(s) found</h2>');
+
+          $("#buttonTest").append('<p>' + response.restaurants[0].name + '</p>');
+
+
+
+      });
+    }
+
+    $(document).ready(function(){
+        $("#autoDisplay").on('click',autoDisplay);
+    });
+    </script>
+
+
+  </head>
+  <body>
+    <main id="main">
+      <h1> test Functions</h1>
+
+      <div id = "restaurants">
+        <input type="reset" value="Reset" onClick="window.location.reload()">
+        <h2>Search # of restaurants in chicago</h2>
+        <input type="text" name="" placeholder="Enter the #" id="input">
+        <button type="button" name="button" id="display">Click to display results</button>
+      </div>
+
+      <hr>
+
+      <div id = buttonTest>
+        <h2>Search by name</h2>
+        <input type="text" name="" placeholder="Enter the #" id="input2">
+        <button type="button" name="button" id="autoDisplay">Click to search</button>
+
+        <script type="text/javascript" src = searchFunc.js></script>
+
+
+      </div>
+
+
+
+
+
+
+
+    </main>
+
+    <hr>
+    <footer>
+      <p>Seth Tummillo, Copyright &copy; 2020 - IT353 - Web Development Technologies </p>
+        <script> document.write("Last Modified: "+ document.lastModified); </script>
+    </footer>
+</body>
+</html>

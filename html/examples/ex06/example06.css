@@ -1,0 +1,12 @@
+figure{
+  background-color: gray;
+  width: 150px;
+  padding: 5px;
+  float: right;
+
+}
+
+figcaption{
+  background-color: yellow;
+  font-family: Papyrus;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="reviewStyle.css" />
+    <title></title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src = "review.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+      var v1 = new URLSearchParams(location.search);
+      var id = v1.get('id');
+      var url = "http://opentable.herokuapp.com/api/restaurants/";
+      var urlTotal = url  + id;
+    //  alert(url  + id);
+      $.get(urlTotal).done(function(response) {
+
+         $("#restName").append(response.name);
+         $("#fieldCountry").append(response.country);
+         $("#fieldAddress").append(response.address);
+         $("#fieldLocation").append(response.city );
+         $("#fieldLocation").append(', ' +  response.state);
+         $("#fieldPhone").append('<p>' +  response.phone +'</p>');
+         $("#fieldAddress").append(', ' + response.postal_code);
+
+        // generateReviews();
+      });
+
+
+
+      //call random review here
+
+    });
+
+
+
+    </script>
+  </head>
+  <header>
+    <h1>WELP</h1>
+    <div class="nav">
+      Review Page
+      <br>
+    </div>
+
+  </header>
+
+
+
+  <body id = "main" >
+    <div class="restaurantInfo">
+      <div id = "mainBody" class="mainContent" >
+        <div class="title">
+          <h2 id = "restName"></h2>
+          <div class="currentRating">
+            <p id="fieldReview">Review: &nbsp</p><p id=reviewValue>5</p><p>&nbsp/ 10</p>
+          </div>
+
+        </div>
+
+        <div id="picture">
+          <img src="images/test.jpg" style="width: 300px">
+        </div>
+        <div class="contactInfo">
+          <div class="address">
+            <p id="fieldCountry">Country: </p>
+            <p id="fieldLocation">Location: </p>
+            <p id="fieldAddress">Address: </p>
+          </div>
+          <div id="fieldPhone" class="phone">
+            <p>Phone number: </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <br>
+
+    <button id="reviewButton" name="reviewButton" onClick="showReview()" style="">Write a commment</button>
+
+    <div class="commentForm" style="display:none;">
+      <!-- <form class="" action="" method="post"> -->
+        <textarea id=commentText></textarea>
+        <div class="rating">
+          <p id="reviewQ">What would you rate out of 10? </p>
+          <select id="reviewSelector" name="">
+            <option>10</option>
+            <option>9</option>
+            <option>8</option>
+            <option>7</option>
+            <option>6</option>
+            <option>5</option>
+            <option>4</option>
+            <option>3</option>
+            <option>2</option>
+            <option>1</option>
+            <option>0</option>
+          </select>
+        </div>
+        <div class="buttons">
+
+          <input type="button" name="" value="Submit" onclick="submitReview()">
+          <input id="cancel" type="button" name="" value="Cancel" onclick="hideReview()">
+        </div>
+      <!-- </form> -->
+    </div>
+
+    <div class="reviewSection">
+      <div class="reviewContainer">
+        <div id="profilePicture" style="float: left;">
+          <img src="images/placeholder-profile-pic.png" alt="" style="width: 100px">
+        </div>
+        <div>
+          <p id="fieldComment" row="10" cols="120" readonly="readonly">The food was alright</p>
+        </div>
+        <div id="fieldRating">
+          <h3 id=fieldRating>Review: 4 / 10</h3>
+
+        </div>
+      </div>
+      <div class="reviewContainer">
+        <div id="profilePicture" style="float: left;">
+          <img src="images/placeholder-profile-pic.png" alt="" style="width: 100px">
+        </div>
+        <div>
+          <p id="fieldComment" row="10" cols="120" readonly="readonly">the atomosphere was great but our server was a bit absent at times</p>
+        </div>
+        <div id="fieldRating">
+          <h3 id=fieldRating>Review: 6 / 10</h3>
+
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <footer>
+  <div class="fixed-footer">
+    <div class="container">
+      <p>Seth Tummillo | Ryan Busch, Copyright &copy; 2020 - IT353 - Web Development Technologies </p>
+      </p>
+      <script>
+        document.write("Last Modified: " + document.lastModified);
+      </script>
+  </div>
+  </footer>
+
+    </html>

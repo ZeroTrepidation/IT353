@@ -1,0 +1,110 @@
+
+
+
+
+* {
+  font-family:sans-serif;
+}
+
+button {
+  background-color: #457B9D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+
+}
+
+
+button:hover {
+  opacity: 0.8;
+}
+
+
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 19.5em;
+  background: #333;
+  padding: 0 0;
+  color: #fff;
+  outline: solid 5px white;
+  text-align: center;
+  background-image: url(images/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+
+.search{
+  flex: auto;
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+.greetings{
+  flex: auto;
+  font-size: 20px;
+  display: inline;
+  text-align: left;
+}
+
+.nav{
+  flex: auto;
+  align-items: flex-end;
+  padding: .5em;
+  background: black;
+}
+
+h1 {
+  font-size: 8em;
+}
+
+body{
+  color: black;
+  margin-top: 26em;
+
+  align-content: space-around;
+
+}
+
+.mainContainer{
+  display: flex;
+}
+
+.sidebar {
+  border: solid;
+
+}
+
+.filterTable{
+  margin-right: 5px;
+}
+
+.mainContent {
+ flex: 4 1;
+ border: solid;
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.container{
+    width: 90%;
+    margin: 0 auto; /* Center the DIV horizontally */
+}
+.fixed-footer{
+
+      bottom: 0;
+      left: 0;
+      width: 100%;
+  }

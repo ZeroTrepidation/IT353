@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Example - AJAX</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+    function display() {
+
+      var searchNumber = $("#input").val();
+      var url = "https://public-us.opendatasoft.com/api/records/1.0/search/?";
+      var data = "dataset=us-colleges-and-universities&sort=tot_enroll&rows=" + searchNumber;
+
+        $.get(url, data).done(function(response) {
+        //  $("#colleges").html(response.records[0].fields.name);
+        $("#colleges").append('<h2>Top ' + searchNumber + ' Universities by Enrollment</h2>');
+
+        for (var i = 0; i < response.records.length; i++) {
+
+          $("#colleges").append('<p>' + response.records[i].fields.name + '</p>');
+          $("#colleges").append('<p>' + "Total Enrolled: "+ response.records[i].fields.tot_enroll + '</p>');
+
+        }
+
+
+        //  var colleges =
+      });
+    }
+
+    $(document).ready(function(){
+        $("#display").on('click',display);
+    });
+
+
+    </script>
+
+  </head>
+  <body>
+    <main id="main">
+      <h1> Search Top Universities by Enrollment</h1>
+      <div id = "colleges">
+        <input type="text" name="" placeholder="Enter the # of Universities" id="input">
+        <button type="button" name="button" id="display">Click to display results</button>
+
+      </div>
+
+    </main>
+
+    <hr>
+    <footer>
+      <p>Seth Tummillo, Copyright &copy; 2020 - IT353 - Web Development Technologies </p>
+        <script> document.write("Last Modified: "+ document.lastModified); </script>
+    </footer>
+</body>
+</html>

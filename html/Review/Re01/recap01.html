@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      th, td, table {
+        border-style: solid;
+        border-color: black;
+        border-collapse: collapse;
+      }
+      td{
+        padding: .5em;
+      }
+      body{
+        margin-left: 3em;
+        margin-right: 3em;
+      }
+      .container{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Practice Forms and Table in HTML</h1>
+    <h2>My Table</h2>
+    <table>
+      <caption>Two Column Table</caption>
+      <th>Picture</th>
+      <th>Description</th>
+      <tr>
+        <td><img src="images/kitten1.jfif" alt=""></td>
+        <td>This is a picture of a Kitten</td>
+      </tr>
+    </table>
+    <h2>Forms</h2>
+    <div class="container">
+      <fieldset>
+        <legend>My Form Field Set 1</legend>
+        <div>
+          <label>Name: </label>
+          <input type="text" name="name" value="type title">
+        </div>
+        <div>
+          <label>City: </label>
+          <select name="city">
+            <option>Choose a City</option>
+            <option>Normal</option>
+            <option>Bloomington</option>
+          </select>
+        </div>
+
+      </fieldset>
+      <fieldset>
+        <legend>My Form Field Set 2</legend>
+        <div>
+          <label>Date: </label>
+          <input type="date" name="" value="">
+        </div>
+        <div>
+          <label>Background Color: </label>
+          <input type="color" name="" value="">
+        </div>
+        <div>
+          <input type="submit" name="" value="submit">
+          <input type="reset" name="" value="reset">
+        </div>
+      </fieldset>
+    </div>
+
+  </body>
+  <footer>
+    <hr>
+    <p>Copyright &copy 2020 - Recap Forms and Tables</p>
+  </footer>
+</html>

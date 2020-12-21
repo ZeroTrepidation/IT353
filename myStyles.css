@@ -1,0 +1,11 @@
+p,h1 {color:blue;
+background: brown;
+font-family: "Comic Sans MS";
+font-size: 40px;}
+h3,h2 {color:cyan;
+background: yellow;
+font-family: "Comic Sans MS";
+font-size: 20px;}
+
+body{background: orange;
+}
