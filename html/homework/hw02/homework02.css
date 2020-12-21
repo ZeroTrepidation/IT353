@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
+
+/* general text formatting */
+
+h1, h2, h3, nav, footer {
+ font-family: Lobster, Cambria, "Times New Roman", serif;
+}
+body {
+   font-family: "Open Sans", Verdana, Arial, sans-serif;
+   font-size: 100%;
+   background-color: lightgray;
+
+}
+
+header, footer{
+  background-color: red;
+  top: 0;
+
+}
+h1{
+
+  font-size: 30px;
+  color: white;
+
+}
+.headerContainer{
+  padding: 10px;
+  color: white;
+}
+
+section{
+  padding: 10px;
+  background-color: #FF9A9A;
+  border: 10px solid white;
+  margin: auto;
+  max-width: 900px;
+
+}
+
+h4{
+  padding: 0px;
+  margin: 0px;
+}
+
+.button{
+  background-color: red;
+  padding: 10px;
+  color: white;
+  border-radius: .75em;
+  outline: 0px;
+  margin-left: 10px
+  box-shadow: 0px 10px 10px rgb(0,0,0,0.5);
+}
+
+.button:hover{
+  background-color: black;
+  color: white;
+}
+
+
+
+/* header and navigation */
+
+
+/* main article styling */

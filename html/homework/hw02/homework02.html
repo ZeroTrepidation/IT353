@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Homework02</title>
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="homework02.css" />
+
+</head>
+
+<body style="width:900px, display: inline-block">
+  <header>
+    <div class="headerContainer">
+      <h1>Share Your Campus</h1>
+      <p>let us know your favorite places on Campus</p>
+    </div>
+  </header>
+  <main>
+
+    <section>
+
+      <form method="post" action="http://www.randyconnolly.com/tests/process.php">
+        <table width=100%>
+          <caption align="left" style="background-color: #322B2B; color: white;">Photo Details</caption>
+          <tbody>
+            <tr>
+              <td colspan="2">
+                <label>Title</label>
+                <input type="text" name="photoName" value="Give your photo a descriptive name" style="width:100%">
+                <label>Description</label>
+                <textarea name="Description" value="Add a rich description to help with search results" rows="5" cols="80" style="width:100%"></textarea>
+
+              </td>
+            </tr>
+            <td>
+              <table>
+                <tr>
+                  <label>Continent<br>
+                  <select name="Continent" style="width:180px">
+                    <option>Choose a Contient</option>
+                    <option>North America</option>
+                  </select><br>
+                </tr>
+                <tr>
+                  <label>Country</label><br>
+                  <select name="countrySelect" style="width:180px">
+                    <option>Choose a Country</option>
+                    <option>United States</option>
+                  </select><br>
+                </tr>
+                <tr>
+                  <label>City</label><br>
+                  <input type="text" name="cityText" style="width:180px">
+                </tr>
+              </table>
+            </td>
+            <td>
+              <table style="width:100%">
+                <tr>
+                  <td style="border:solid">
+                    <label>Copyright?</label><br>
+                    <input type="radio" name="copyright" value="1">All Rights Reserved<br/>
+                    <input type="radio" name="copyright" value="2" checked>Creative Commons<br/>
+                  </td>
+
+
+                </tr>
+                <tr>
+                  <td style="border:solid">
+                    <label>Creative Commons Types</label><br>
+                    <input type="radio" name="cctype" value="1">Attribution<br/>
+                    <input type="radio" name="cctype" value="2">Non-Commercial<br/>
+                    <input type="radio" name="cctype" value="3">No Derivative Works
+                  </td>
+
+                </tr>
+              </table>
+            </td>
+          </tbody>
+          <tfoot >
+            <th colspan="2" align="left" style="padding:5px; background:#8B7272; width:100%"><input type="checkbox" name="" value="">I accept the software license</th>
+          </tfoot>
+        </table>
+        <table width=100%>
+          <tbody>
+            <td>
+              <table cellpadding="5">
+                <tr>
+                  <td>
+                    <label>Rate this Photo</label><br>
+                    <input type="text" name="rating" value="" style="width:25px">
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <label>Color Correction: </label><br>
+                    <input type="color" name="colorcorrection" value="">
+                  </td>
+                </tr>
+
+              </table>
+            </td>
+            <td>
+              <table style="width:100%" cellpadding="10">
+                <tr>
+                  <td style="border:solid;" >
+                    <label>Date Taken: </label><br>
+                    <input type="date" name="datepicker" value=""><br>
+                    <label>Time Taken: </label><br>
+                    <input type="time" name="time picker" value="">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tbody>
+          <tfoot >
+
+            <th colspan="2" align="left" style="padding:5px; background:#8B7272; width:100%"><input type="submit" name="buttonSubmit" value="Submit" class="button"><input type="reset" name="buttonReset" value="Reset" class="button"></th>
+          </tfoot>
+        </table>
+      </form>
+    </section>
+  </main>
+
+  <footer style="padding: 10px; color: white;">
+    <p>Seth Tummillo, Copyright &copy; 2020 - IT353 - Web Development Technologies </p>
+    </p>
+    <script>
+      document.write("Last Modified: " + document.lastModified);
+    </script>
+    <footer>
+</body>
+
+</html>
